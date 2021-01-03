@@ -10,6 +10,20 @@ const Image = ({image}) => {
           alt={tags}
           className="card-img-top"
         />
+        <div className="card-body">
+          <p className="card-text">{likes} likes</p>
+          <p className="card-text">{views} views</p>
+        </div>
+        <div className="card-footer">
+          <a 
+            target="_blank" 
+            href={largeImageURL}
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-block"
+          >
+              Ver Imagen
+            </a>
+        </div>
       </div>
     </div>
   );
