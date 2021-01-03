@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = ({message}) => {
   return (
-    <p className="my-3 p4 text-center text-white alert alert-danger">
+    <p className="my-3 p4 text-center alert alert-primary">
       {message}
     </p>
   );

@@ -35,8 +35,8 @@ const Form = ({saveQuery}) => {
             value="Buscar"
           />
         </div>
-        {error && <Error message="Agrega un término de búsqueda"/>}
       </div>
+      {error && <Error message="Agrega un término de búsqueda"/>}
     </form>
   );
 }
