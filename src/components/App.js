@@ -10,15 +10,18 @@ const App = () => {
   useEffect(() => {
     if(!search) return
     const requestApi = async () => {
-      const numberOfResult = '30'
+      const numberOfResult = 30
       const API_KEY = '15430207-b4af63f91ba4c8a3b2091efb2'
-      const URL= `https://pixabay.com/api/?key=${API_KEY}&q=&per_page=${numberOfResult}&page=${currentPages}`
+      const URL= `https://pixabay.com/api/?key=${API_KEY}&q=${search}&per_page=${numberOfResult}&page=${currentPages}`
 
       const request = await fetch(URL)
       const response = await request.json()
 
       setTotalPages(Math.ceil(response.hits/numberOfResult))
       setImages(response.hits)
+
+      const jumbotron = document.querySelector('.jumbotron')
+      jumbotron.scrollIntoView({behavior:'smooth'})
     }
     requestApi()
   }, [search, currentPages]);
